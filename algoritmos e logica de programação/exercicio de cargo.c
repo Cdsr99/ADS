@@ -22,7 +22,7 @@ main()
 	}
 	else if (cargo == 4)
 	{
-	  printf("O aumento do seu cargo foi de 50%");	
+	  printf("O aumento do seu cargo foi de 50");	
 	}
 	else if (cargo == 5)
 	{
