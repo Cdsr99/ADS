@@ -1,3 +1,23 @@
 body{
-    background-color: aquamarine;
+    background-color: #C9F9FA;
+    font-size: 16pt;
 }
+
+h1{
+    font-family: inherit;
+    font-size: 30pt;
+}
+
+.menu a{
+    margin: 0px;
+    padding: 5px;
+    display: inline;
+  
+  
+}
+
+.menu:hover{
+    background-color: red;
+    border-bottom: skyblue;
+    display: inline;
+}  
