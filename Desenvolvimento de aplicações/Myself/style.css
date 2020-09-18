@@ -1,5 +1,5 @@
 body{
-    background-color: #C9F9FA;
+    background-color: #ooooo;
     font-size: 16pt;
 }
 
@@ -11,13 +11,15 @@ h1{
 .menu a{
     margin: 0px;
     padding: 5px;
-    display: inline;
+   
   
   
 }
 
 .menu:hover{
-    background-color: red;
-    border-bottom: skyblue;
-    display: inline;
-}  
+    border-radius: 16px;
+    display: inline-block;
+    background-color: lawngreen;
+
+}
+
