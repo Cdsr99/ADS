@@ -1,7 +1,3 @@
-body{
-    background-color: #ooooo;
-    font-size: 16pt;
-}
 
 h1{
     font-family: inherit;
@@ -11,9 +7,13 @@ h1{
 .menu a{
     margin: 0px;
     padding: 5px;
-   
-  
-  
+    
+}
+
+.table tr td{
+    margin: 1000px;
+    padding: 100px;
+    
 }
 
 .menu:hover{
@@ -22,4 +22,9 @@ h1{
     background-color: #B2F0F1 ;
 
 }
+
+#b_projects{
+    font-size: 14pt;
+}
+
 
