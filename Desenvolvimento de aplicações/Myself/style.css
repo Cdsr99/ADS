@@ -16,10 +16,20 @@ h1{
     
 }
 
-.menu:hover{
-    border-radius: 16px;
-    display: inline-block;
+.menu a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+    font-size: 20;
+}
+
+.menu a:hover {
+    display: inline;
     background-color: #B2F0F1 ;
+    color: black;
 
 }
 
