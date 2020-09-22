@@ -37,36 +37,56 @@ main()
     printf("\n");
     scanf("%d",&opb);
     
-    
+    // 1
     if(opc == 1 && opb == 1)
     {
-    	resul = maracarrao + cha;
-    	printf("Voce escolheu a opcao %opc e %opb que da um total de caloria de %",opc,opb,resul);
+    	resul = macarrao + cha;
+    	printf("Voce escolheu a opcao %d e %d que da um total de caloria de %d",opc,opb,resul);
 	}else if(opc == 1 && opb == 2)
 	{
 		resul = macarrao  + suco ;
-    	printf("Voce escolheu a opcao %opc e %opb que da um total de caloria de %",opc,opb,result);	
+    	printf("Voce escolheu a opcao %d e %d que da um total de caloria de %d",opc,opb,resul);	
 	}
-	else if(opc == 1 && opb == 2)
+	else if(opc == 1 && opb == 3)
 	{
-		resul = macarrao + refri  ;
-    	printf("Voce escolheu a opcao %opc e %opb que da um total de caloria de %",opc,opb,result);	
+		resul = macarrao + refri ;
+    	printf("Voce escolheu a opcao %d e %d que da um total de caloria de %d",opc,opb,resul);	
 	}
-	else if(opc == 1 && opb == 2)
+	
+	// 2 - Japones
+	else if(opc == 2 && opb == 1)
 	{
-		resul =  + ;
-    	printf("Voce escolheu a opcao %opc e %opb que da um total de caloria de %",opc,opb,result);	
+		resul = japones  + cha ;
+    	printf("Voce escolheu a opcao %d e %d que da um total de caloria de %d",opc,opb,resul);	
 	}
-	else if(opc == 1 && opb == 2)
+	else if(opc == 2 && opb == 2)
 	{
-		resul =  + ;
-    	printf("Voce escolheu a opcao %opc e %opb que da um total de caloria de %",opc,opb,result);	
+		resul = japones  + suco ;
+    	printf("Voce escolheu a opcao %d e %d que da um total de caloria de %d",opc,opb,resul);	
 	}
-	else if(opc == 1 && opb == 2)
+		else if(opc == 2 && opb == 3)
 	{
-		resul =  + ;
-    	printf("Voce escolheu a opcao %opc e %opb que da um total de caloria de %",opc,opb,result);	
+		resul = japones + refri;
+    	printf("Voce escolheu a opcao %d e %d que da um total de caloria de %d",opc,opb,resul);	
 	}
+	// 3
+
+		else if(opc == 3 && opb == 1)
+	{
+		resul = chileno + cha ;
+    	printf("Voce escolheu a opcao %d e %d que da um total de caloria de %d",opc,opb,resul);	
+	}
+		else if(opc == 3 && opb == 2)
+	{
+		resul = chileno + suco;
+    	printf("Voce escolheu a opcao %d e %d que da um total de caloria de %d",opc,opb,resul);	
+	}
+		else if(opc == 3 && opb == 3)
+	{
+		resul = chileno + refri ;
+    	printf("Voce escolheu a opcao %d e %d que da um total de caloria de %d",opc,opb,resul);	
+	}
+
     
     return 0;
 }
