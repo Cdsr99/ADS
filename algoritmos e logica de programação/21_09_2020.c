@@ -18,6 +18,8 @@ main()
 	//Operacao
 	int resul = 0;
 	
+	menu:
+		system("clear");
     printf("Ola seja bem vindo ao restaurante dois irmaos\n");
     printf("\n");
     printf("Esse e o nosso menu\n");
@@ -85,6 +87,15 @@ main()
 	{
 		resul = chileno + refri ;
     	printf("Voce escolheu a opcao %d e %d que da um total de caloria de %d",opc,opb,resul);	
+	}
+	int ret = 0;
+	printf("\n");
+	printf("Gostaria de pedir novamente? 1 - sim 2- nao? ");
+	scanf("%d",&ret);
+	
+	if(ret == 1)
+	{
+		goto menu;
 	}
 
     
