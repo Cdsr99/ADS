@@ -1,10 +1,14 @@
-let valor1 = document.getElementById('num1');
-let valor2 = document.getElementById('num2');
-let acao = document.getElementById('actions');
+const valor1 = document.getElementById('numO');
+const valor2 = document.getElementById('numT');
+const acao = document.getElementById('actions');
+
+
+
+
 
 function calculo() {
 
-    alert(valor1);
+    alert(valor1.value);
     alert(valor2);
     alert(acao);
 
