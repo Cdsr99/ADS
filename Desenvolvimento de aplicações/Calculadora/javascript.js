@@ -5,8 +5,8 @@ var acao = document.getElementById('actions');*/
 
 function calculo() {
 
-    var valor1 = document.getElementById("numO");
-    var valor2 = document.getElementById('numT');
+    var valor1 = document.getElementById("num1");
+    var valor2 = document.getElementById('num1');
     var acao = document.getElementById('actions');
 
     var n1 = parseInt(valor1.value);
