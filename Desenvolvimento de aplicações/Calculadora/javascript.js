@@ -1,31 +1,32 @@
-const valor1 = document.getElementById('numO');
-const valor2 = document.getElementById('numT');
-const acao = document.getElementById('actions');
-
-
-
+/*var valor1 = document.getElementById("numO");
+var valor2 = document.getElementById('numT');
+var acao = document.getElementById('actions');*/
 
 
 function calculo() {
 
-    alert(valor1.value);
-    alert(valor2);
-    alert(acao);
+    var valor1 = document.getElementById("numO");
+    var valor2 = document.getElementById('numT');
+    var acao = document.getElementById('actions');
 
-if (acao == "Somar") {
-    var resultado = valor1 + valor2;
+    var n1 = parseInt(valor1.value);
+    var n2 = parseInt(valor2.value);
+    
+
+if (acao.value == "Somar") {
+    var resultado = n1 + n2;
     alert("O resultado da soma é de :" + resultado);
 }
- if(acao == "Dividir"){
-    var resultado = valor1 / valor2;
+ if(acao.value == "Dividir"){
+    var resultado = n1 / n2;
     alert("O resultado da divisão é de :" + resultado);
 } 
-if(acao == "Multipicar"){
-    var resultado = valor1 * valor2;
+if(acao.value == "Multiplicar"){
+    var resultado = n1 * n2;
     alert("O resultado da multiplicação é de :" + resultado);
 } 
-if(acao == "Subtrair"){
-    var resultado = valor1 - valor2;
+if(acao.value == "Subtrair"){
+    var resultado = n1 - n2;
     alert("O resultado da subtração é de :" + resultado);
 }
     
