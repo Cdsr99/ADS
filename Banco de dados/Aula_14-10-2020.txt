@@ -1,0 +1,124 @@
+#Criando a tabela produto  
+create table produtos  
+( cod_pro int not null primary key,  
+nome_pro varchar(100) not null, 
+uf_pro varchar(02) not null,  
+bairro_pro varchar(30) not null, 
+dtcompra_pro datetime not null,  
+valor_pro numeric(10,2) not null )  ;
+
+#Inserindo os registros na tabela produto 
+insert into produtos values(1,'Monitor','SP','Osasco','20110110',450.56);  
+insert into produtos values(2,'HM','SP','Campinas','20110310',630.53);  
+insert into produtos values(3,'Teclado','SP','Maua','20110410',25.26);  
+insert into produtos values(4,'CPU','PR','Curitiba','20110220',953.52);  
+insert into produtos values(5,'Mouse','SC','Itajai','20100310',24.06);  
+insert into produtos values(6,'Impressora','SC','Florianopolis','20100411',490.02);
+insert into produtos values(7,'Fone de ouvido','MG','Belo Horizonte','20110118',35.85);  
+insert into produtos values(8,'Gravador DVD','SP','Limeira','20110811',70.14);  
+insert into produtos values(9,'Placa de Video','SP','Embu','20110212',210.17);  
+insert into produtos values(10,'Processador','PR','CIC','20110319',356.51);
+
+#Criando a tabela Fornecedor  
+create table fornecedor  
+( cod_for int not null primary key,  
+nome_for varchar(100) not null, 
+bairro_for varchar(30) not null,  
+uf_for varchar(02) not null,  
+dtcad_for datetime not null, 
+site_for varchar(100) not null )  ;
+
+#Inserindo os registros na tabela fornecedor  
+insert into fornecedor values(100,'Joao da Silva','Capao Raso', 'PR', '20100511', 'www.terra.com.br');  
+insert into fornecedor values(110,'Antoni Manuel Souza','Agua Verde', 'PR', '20100511',  'www.onda.com.br'); 
+insert into fornecedor values(120,'Maria da Cruz','Agua Verde', 'PR', '20100312', 'www.uol.com.br')  ;
+insert into fornecedor values(130,'Manoel da Luz','Itu', 'SP', '20100312', 'www.tetra.com.br') ;
+insert into fornecedor values(140,'Pedro Cruzado','Taboa', 'SP', '20100213', 'www.sol.com.br')  ;
+insert into fornecedor values(150,'Ana Paula','Santo Andre', 'SP', '20110311', 'www.aol.com.br') ;
+insert into fornecedor values(160,'Murilo Medeiros','Indaial', 'SC', '20100214', 'www.terra.com.br');  
+insert into fornecedor values(170,'Patricia','Brusque', 'SC', '20100811', 'www.onda.com.br') ;
+insert into fornecedor values(180,'Manueli Silva','Blumenal', 'SC', '20100919', 'www.brturbo.com.br');  
+insert into fornecedor values(190,'Edna Soares','Goiania', 'GO', '20110216', 'www.luz.com.br')  ;
+insert into fornecedor values(200,'Salete Flores','Campo grande', 'MT', '20100219', 'www.conto.com.br'); 
+
+
+#Criando a tabela Pedido  
+create table pedido 
+( cod_ped int not null primary key,  
+data_ped datetime not null,  
+qtde_ped numeric(10,0) not null,  
+vlrTot_ped numeric(10,2) not null,  
+cod_for int not null ,
+cod_pro int not null , 
+foreign key (cod_for) references  fornecedor,
+foreign key (cod_pro) references produtos
+);
+
+#Inserindo os registros na tabela pedido  
+insert into pedido values(20,'20090515',10,458.58,'170', '7')  ;
+insert into pedido values(30,'20080412',110,85.52,'130', '8')  ;
+insert into pedido values(40,'20100314',850,825.42,'140', '6')  ;
+insert into pedido values(50,'20080412',185,75.24,'150', '5') ;
+
+insert into pedido values(60,'20110213',356,1852,'160', '4')  ;
+insert into pedido values(70,'20010314',874,45.42,'170', '3') ;
+insert into pedido values(80,'20070323',250,985.47,'180', '2') ; 
+insert into pedido values(90,'20090618',780,652.27,'190', '1')  ;
+insert into pedido values(100,'20080222',520,8745.22,'110', '9') ; 
+insert into pedido values(110,'20110412',583,254.33,'120', '10')  ;
+
+# -------------------------------------------------- 1 ------------------------------------------------------------------------
+
+insert into produtos values(11,'Headset','PR','Iguacu','20201210',70.10); 
+insert into fornecedor values(210,'Caio da Silveira','PR', 'BR', '20201010', 'www.cdsr99.com.br'); 
+insert into pedido values(120,'20201020',5,500.58,'210', '11')  ;
+
+insert into produtos values(12,'Fone Blue','PR','Iguacu','20201210',120.39); 
+insert into fornecedor values(211,'jbl sons','RJ', 'BR', '20200219', 'www.jbl.com.br'); 
+insert into pedido values(121,'20190330',40,1000.00,'211', '12')  ;
+
+insert into produtos values(13,'Mouse','PR','Santa Terezinha','20190416',10.00); 
+insert into fornecedor values(212,'Carlos','PR', 'BR', '20080910', 'www.mousemousinho.com.br'); 
+insert into pedido values(122,'20201103',5,4.58,'212', '13')  ;
+
+insert into produtos values(14,'Hd','PR','Batel','20090123',2000.00); 
+insert into fornecedor values(213,'Cleverson','SP', 'BR', '20190918', 'www.cleversin.com.br'); 
+insert into pedido values(123,'20190923',79,5000,'213', '14')  ;
+
+insert into produtos values(15,'Cadeira','PR','Iguacu','20201210',70.10); 
+insert into fornecedor values(214,'Caio da Silveira','PR', 'BR', '20201010', 'www.cdsr99.com.br'); 
+insert into pedido values(124,'20201020',5,500.58,'214', '15')  ;
+
+# --------------------------------------------------- 2 ------------------------------------------------------------------------
+
+select nome_pro as Produto, valor_pro as R$  from produtos where nome_pro like '%placa%';
+
+#------------------------------------------------------ 3 ---------------------------------------------------------------------
+select 
+p.nome_pro as Produto,
+pe.data_ped as Data
+from pedido pe, produtos p where year(pe.data_ped) = 2008 and p.nome_pro like '%m%';
+
+#------------------------------------------------ 4 ----------------------------------------------------------------------------
+select sum(valor_pro) as R$ from produtos p , fornecedor f where f.uf_for in ('PR','SP') and month(f.dtcad_for) in ('02','03','09');
+
+# ------------------------------------------- 5 -----------------------------------------------------------------------------------
+select count(nome_for) as Qtd from fornecedor f, pedido p where f.uf_for in ('SC','SP') and year(p.data_ped) in (2011,2010);
+
+#------------------------------------------ 6 ------------------------------------------------------------------------------------
+select f.nome_for as Nome from fornecedor f, produtos p where f.uf_for in ('SC','SP') and day(p.dtcompra_pro) in (10,11,19);
+
+# --------------------------------------------- 7 -----------------------------------------------------------------------------
+select f.nome_for as Fornecedor from fornecedor f, pedido p where f.cod_for = p.cod_for  group by f.uf_for;
+
+
+#-------------------------------------------------- 8 -------------------------------------------------------------------------
+select p.nome_pro as Produto from produtos p, pedido pe where p.valor_pro between '10' and '100' and year(pe.data_ped) = 2010 and month(pe.data_ped) in (04,06,03)
+
+#--------------------------------------------------- 9 --------------------------------------------------------------------------
+
+
+
+
+
+
