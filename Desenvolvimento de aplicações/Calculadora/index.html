@@ -5,11 +5,31 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Calculadora</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="sortcut icon" href="icons8-calculator-48.png" >
-    <script src='main.js'></script>
+    <script src='javascript.js'></script>
 </head>
 <body>
+    <center>
+        <br>
+        <h1>Calculadora</h1>
+        <br>
+        <br>
+        Número 1: <input id="num1" type="number">
+        <br>
+        Número 2: <input id="num2" type="number">
+        <br>
+        <br>
+        O que você gostaria de fazer? <input list="action" placeholder="Selecionar" id="actions">
+
+        <datalist id="action">
+            <option value="Somar">
+            <option value="Dividir">
+            <option value="Multiplicar">
+            <option value="Subtrair">              
+         </datalist>
+        <button onclick="calculo();">Calcular</button>
     
+    
+    </center>
 </body>
 </html>
