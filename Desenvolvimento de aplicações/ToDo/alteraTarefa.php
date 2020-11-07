@@ -5,7 +5,7 @@ require "src/classes/ArquivoTarefa.php";
 
 
 if (isset($_POST)) {
-    $arquivoTarefa = new ArquivoTarefa('tarefas.json');
+    $arquivoTarefa = new ArquivoTarefa('tarefas.csv');
     
     // recupera as tarefas
     $arrTarefas = $arquivoTarefa->le();
