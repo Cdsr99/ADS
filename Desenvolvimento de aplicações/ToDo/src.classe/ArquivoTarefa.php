@@ -18,9 +18,9 @@ class ArquivoTarefa
             $arr['nome'] = $tarefa->getNome();
             $arr['descricao'] = $tarefa->getDescricao();
             $arr['dataLimite'] = $tarefa->getDataLimite();
-            $arr['status'] = $tarefa->getStatus();
-            $arr['img'] = $tarefa->getImg();
-            $dataTarefas[] = $arr;
+            $arr['status'] = $tarefa->getStatus(); // registrando status
+            $arr['img'] = $tarefa->getImg(); // resgistrando o link da img
+            $dataTarefas[] = $arr;// ?
         }        
         $jsonTarefas = json_encode($dataTarefas); 
         file_put_contents($this->caminho, $jsonTarefas);

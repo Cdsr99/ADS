@@ -9,7 +9,7 @@ require "src/classes/ArquivoTarefa.php";
 
 $template = file_get_contents('resource/lista_tarefas.html');
 
-$arquivoTarefa = new ArquivoTarefa('tarefas.json');
+$arquivoTarefa = new ArquivoTarefa('tarefas.txt');// envia para ArquivoTarefa.php
 $listaTarefasJSON = $arquivoTarefa->le();
 
 $modeloTarefa = file_get_contents('resource/tarefa.html');

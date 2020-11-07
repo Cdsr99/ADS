@@ -11,6 +11,7 @@ class Tarefa
 
     public function __construct(int $status, string $nome, string $descricao, string $dataLimite, string $img)
     {
+        //Recebendo / add info
        $this->status = $status;
        $this->nome   = $nome;
        $this->descricao = $descricao;
